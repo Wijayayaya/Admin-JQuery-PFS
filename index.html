@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Admin</title>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <!-- Tambahkan jQuery CDN sebelum `script.js` -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- <nav>  
+        <div class="sidebar">  
+            <div class="logo">  
+                <i class="bx bx-menu menu-icon"></i>  
+                <span class="logo-name">Logo</span>  
+                 
+            </div>  
+  
+            <div class="sidebar-content">  
+                <ul class="lists">  
+                    <li class="list">  
+                        <a href="#" class="nav-link">  
+                        <i class="bx bx-home-alt icon"></i>  
+                        <span class="link">Dashboard</span>  
+                        </a>  
+                    </li>  
+                    <li class="list">  
+                        <a href="#" class="nav-link">  
+                        <i class="bx bx-bar-chart-alt-2 icon"></i>  
+                        <span class="link">Revenue</span>  
+                        </a>  
+                    </li>  
+                    <li class="list">  
+                        <a href="#" class="nav-link">  
+                        <i class="bx bx-bell icon"></i>  
+                        <span class="link">Notifications</span>  
+                        </a>  
+                    </li>  
+                    <li class="list">  
+                        <a href="#" class="nav-link">  
+                        <i class="bx bx-message-rounded icon"></i>  
+                        <span class="link">Messages</span>  
+                        </a>  
+                    </li>   
+                    <li class="list">  
+                        <a href="#" class="nav-link">  
+                        <i class="bx bx-pie-chart-alt-2 icon"></i>  
+                        <span class="link">Analytics</span>  
+                        </a>  
+                    </li>  
+                    <li class="list">  
+                        <a href="#" class="nav-link">  
+                        <i class="bx bx-heart icon"></i>  
+                        <span class="link">Likes</span>  
+                        </a>  
+                    </li>  
+                    <li class="list dropdown">  
+                        <a href="#" class="nav-link">  
+                            <i class="bx bx-folder-open icon"></i>  
+                            <span class="link">Files</span>  
+                        </a>  
+                        <div class="dropdown-content">  
+                            <a href="#" class="link">File 1</a>  
+                            <a href="#" class="link">File 2</a>  
+                            <a href="#" class="link">File 3</a>  
+                        </div>  
+                    </li>  
+                </ul>  
+  
+                <div class="bottom-content">  
+                    <ul class="lists">  
+                        <li class="list">  
+                            <a href="#" class="nav-link">  
+                            <i class="bx bx-cog icon"></i>  
+                            <span class="link">Settings</span>  
+                            </a>  
+                        </li>  
+                        <li class="list">  
+                            <a href="#" class="nav-link">  
+                            <i class="bx bx-log-out icon"></i>  
+                            <span class="link">Logout</span>  
+                            </a>  
+                        </li>   
+                    </ul>  
+                </div>  
+            </div>  
+        </div>  
+    </nav>   -->
+
+    <!-- <nav> -->
+    <div class="sidebar">
+      <div class="logo">
+        <i class="bx bx-menu menu-icon"></i>
+        <span class="logo-name">Logo</span>
+      </div>
+      <div class="sidebar-content">
+        <ul class="lists">
+          <li class="list">
+            <a href="#!" class="nav-link">
+              <i class="bx bx-home-alt icon"></i>
+              <span class="link">Dashboard</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="#!" class="nav-link">
+              <i class="bx bx-bar-chart-alt-2 icon"></i>
+              <span class="link">Revenue</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="#!" class="nav-link">
+              <i class="bx bx-pie-chart-alt-2 icon"></i>
+              <span class="link">Analytics</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="#!" class="nav-link">
+              <i class="bx bx-heart icon"></i>
+              <span class="link">Likes</span>
+            </a>
+          </li>
+          <li class="list dropdown">
+            <a href="#!" class="nav-link">
+              <i class="bx bx-folder-open icon"></i>
+              <span class="link">Files</span>
+            </a>
+            <div class="dropdown-content">
+              <a href="#!" class="link">File 1</a>
+              <a href="#!" class="link">File 2</a>
+              <a href="#!" class="link">File 3</a>
+            </div>
+          </li>
+        </ul>
+
+        <div class="bottom-content">
+          <ul class="lists">
+            <li class="list">
+              <a href="#!" class="nav-link">
+                <i class="bx bx-cog icon"></i>
+                <span class="link">Settings</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#!" class="nav-link">
+                <i class="bx bx-log-out icon"></i>
+                <span class="link">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- </nav> -->
+
+    <!-- <section class="overlay"></section>  
+     
+    
+
+    <section class="overlay"></section>   -->
+
+    <header class="header">
+      <div class="search-container">
+        <input type="text" placeholder="Search here..." class="search-input" />
+        <i class="bx bx-search icon"></i>
+      </div>
+      <div class="header-icons">
+        <i class="bx bx-bell icon"></i>
+        <i class="bx bx-message-rounded icon"></i>
+        <div class="profile-icon">
+          <img src="image2.JPG" alt="Profile" />
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="content">
+        <div class="card-container">
+          <div class="card blue">
+            <h2>Total Income</h2>
+            <p class="amount">$ 579,000</p>
+            <p class="saved">Saved 25%</p>
+          </div>
+          <div class="card yellow">
+            <h2>Total Expenses</h2>
+            <p class="amount">$ 79,000</p>
+            <p class="saved">Saved 25%</p>
+          </div>
+          <div class="card purple">
+            <h2>Cash on Hand</h2>
+            <p class="amount">$ 92,000</p>
+            <p class="saved">Saved 25%</p>
+          </div>
+          <div class="card green">
+            <h2>Net Profit Margin</h2>
+            <p class="amount">$ 179,000</p>
+            <p class="saved">Saved 65%</p>
+          </div>
+        </div>
+        <div class="charts-container">
+          <div class="chart">
+            <h2>AP and AR Balance</h2>
+            <p>Avg. $5,309</p>
+            <div class="chart-controls">
+              <select>
+                <option>Monthly</option>
+                <option>Yearly</option>
+              </select>
+              <select>
+                <option>Last Year</option>
+                <option>This Year</option>
+              </select>
+            </div>
+            <div class="chart-placeholder">
+              <canvas id="myBarChart"></canvas>
+              <!-- script.js -->
+            </div>
+          </div>
+          <div class="budget-container">
+            <div class="budget">
+              <h2>% of Income Budget</h2>
+              <!-- <div class="progress-circle">  
+                        <span>67%</span>  
+                    </div>   -->
+              <div class="pie-chart">
+                <canvas id="myPieChart1"></canvas>
+                <!-- script.js -->
+              </div>
+              <p>Balance: $18,570</p>
+              <a href="#">View Full Report</a>
+            </div>
+            <div class="budget">
+              <h2>% of Expenses Budget</h2>
+              <!-- <div class="progress-circle">  
+                        <span>48%</span>  
+                    </div>   -->
+              <div class="pie-chart">
+                <canvas id="myPieChart2"></canvas>
+                <!-- script.js -->
+              </div>
+              <p>Balance: $18,570</p>
+              <a href="#">View Full Report</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

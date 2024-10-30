@@ -1,0 +1,438 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100%;
+  background: #f8fbfd;
+}
+
+/* nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%; /* Mengatur tinggi sidebar agar memenuhi layar 
+  width: 260px; /* Lebar sidebar 
+  display: flex;
+  flex-direction: column; /* Mengatur sidebar menjadi kolom
+  background: #fff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+} */
+
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  margin: 0px 20px;
+  padding: 15px;
+  color: #333;
+}
+
+.logo .menu-icon {
+  color: #333;
+  font-size: 24px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.logo .logo-name {
+  color: #333;  
+  font-size: 25px;  
+  font-weight: 500;  
+  display: none; /* Sembunyikan nama logo */
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+/* Ubah posisi menu icon agar tetap terlihat */
+.menu-icon {
+  position: fixed;
+  top: 20px;
+  left: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000; /* Agar selalu terlihat di atas */
+  color: #333;
+}
+
+.sidebar {
+  position: fixed;
+  /* left: 0px; Tersembunyi di luar layar */
+  transition: left 0.3s ease; /* Transisi untuk animasi muncul */
+  width: 80px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .sidebar-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 20px;
+  margin-top: 40px;
+}
+
+.sidebar-content .list {
+  list-style: none;
+}
+
+.sidebar:hover {
+  /* left: 0; Muncul saat di-hover */
+  width: 220px; /* Expand width on hover */
+}
+
+.sidebar:hover .logo .logo-name {
+  display: block; /* Tampilkan nama logo saat hover */
+}
+
+/* Memunculkan hanya icon di luar sidebar */
+.sidebar:hover .nav-link .link {
+  display: block;
+}
+
+.sidebar .nav-link .link {
+  display: none; /* Sembunyikan teks link */
+}
+
+.sidebar .nav-link .icon {
+  font-size: 24px; /* Perbesar icon */
+  display: inline-block;
+  color: #707070;
+  margin-right: 0; /* Hapus margin kanan */
+}
+
+.list .nav-link {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  padding: 14px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.lists .nav-link:hover {
+  background-color: #4070f4;
+}
+
+.nav-link .icon {
+  margin-right: 14px;
+  font-size: 20px;
+  color: #707070;
+}
+
+.nav-link .link {
+  font-size: 16px;
+  color: #707070;
+  font-weight: 400;
+}
+
+.lists .nav-link:hover .icon,
+.lists .nav-link:hover .link {
+  color: #fff;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  padding: 14px 12px;
+  border-radius: 8px;
+}
+
+.dropdown-content a:hover {
+  background-color: #4070f4;
+}
+
+.bottom-content {
+  margin-top: auto; /* Memastikan bagian ini berada di bawah */
+}
+
+.bottom-content .lists {
+  list-style: none;
+  padding: 0; /* Menghapus padding default */
+}
+
+.overlay {
+  display: none; /* Menghapus overlay karena tidak diperlukan */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 5px;
+  left: 100px; /* Sesuaikan dengan lebar sidebar */
+  right: 20px;
+  z-index: 1000;
+  border-radius: 15px;
+  transition: margin-left 0.3s ease;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background: #f1f1f1;
+  border-radius: 10px;
+  padding: 5px;
+  width: 1500px;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 8px;
+  border-radius: 10px;
+  flex-grow: 1; /* Membuat input mengisi ruang yang tersedia */
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+}
+
+.header-icons .icon {
+  font-size: 24px;
+  margin-left: 20px;
+  cursor: pointer;
+  color: #707070;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.header-icons .icon:hover {
+  transform: scale(1.2); /* Membesarkan icon saat di-hover */
+  color: #007bff; /* Ubah warna icon saat di-hover */
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-icon img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease; /* Menambahkan transisi untuk efek hover */
+}
+
+.profile-icon:hover img {
+  transform: scale(1.2); /* Membesarkan elemen saat di-hover */
+}
+
+main {
+  margin-left: 50px; /* Memberikan ruang untuk sidebar */
+  padding: 20px;
+}
+
+.main-content {
+  transition: margin-left 0.3s ease;
+}
+
+/* Saat sidebar terbuka, dorong konten */
+.sidebar:hover ~ .main-content {
+  margin-left: 220px;
+}
+
+.sidebar:hover ~ .header {
+  margin-left: 160px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.card {
+  width: calc(50% - 10px); /* Mengatur lebar kartu */
+  margin-bottom: 20px; /* Jarak antara baris kartu */
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Zoom in effect */
+}
+
+.blue {
+  background-color: #4a90e2; /* Warna biru */
+}
+
+.yellow {
+  background-color: #b38c29; /* Warna kuning */
+}
+
+.purple {
+  background-color: #9b59b6; /* Warna ungu */
+}
+
+.green {
+  background-color: #1abc9c; /* Warna hijau */
+}
+
+.amount {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.saved {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.charts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.chart {
+  flex: 1;
+  margin-right: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #48eef1;
+}
+
+.chart-placeholder:hover {
+  transform: scale(1.05); /* Zoom in effect */
+}
+
+.chart-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.chart-placeholder {
+  height: 200px; /* Tinggi untuk placeholder grafik */
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.budget-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.budget {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.progress-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto 10px;
+}
+
+.progress-circle span {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.chart-placeholder {
+  width: 100%;
+  height: 400px;
+  background-color: rgba(240, 240, 240, 0.9);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: none;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.pie-chart {
+  width: 300px;
+  height: 300px;
+  /* background-color: #e0e0e0; */
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.pie-chart:hover {
+  transform: scale(1.05); /* Zoom in effect */
+}
+
+.pie-chart .label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .pie-chart {
+    width: 200px;
+    height: 200px;
+  }
+}
